@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+
+    div:nth-child(1){
+        display: inline-block;
+        transform: rotate(-15deg);
+        transform-origin:50px 500px;
+        transition:1s;
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+    div:nth-child(2){
+        display: inline-block;
+        margin-left: 30px;
+        transition: 0.5s;
+        transition-delay: 0.3s ; 
+    }
+    div:nth-child(1):active {
+            transform: rotate(42deg);
+        }
+    div:nth-child(1):active ~ div:nth-child(2) {
+            transform:rotatez(30deg) scale(0.4) translate(250px,100px);
+        }
+</style>
+</head>   
+<body background="beijing.jpg">
+    <div><img src="futou.png"></div>
+    <div><img src="mogu.png"></div>
+</body>
+</html>

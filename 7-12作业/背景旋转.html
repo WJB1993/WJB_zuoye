@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+                position: relative;
+                height: 300px;
+                width: 300px;
+                border:1px solid red;
+                transform-style: preserve-3d;
+        }
+        .parent > div{
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: 2s;
+            
+        }
+        .parent > div:nth-child(1){
+            background-color: yellow;
+            transform: rotatey(180deg);
+            
+        }
+        .parent > div:nth-child(2){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        img{
+            border: 1px red solid;
+            height: 100%;
+            width: 100%;
+        }        
+        .parent:hover div:nth-child(1){
+            transform: rotatey(0deg);
+        }
+        .parent:hover div:nth-child(2){
+            transform: rotatey(180deg);
+        }
+
+    </style>
+</head>
+<body background="../beijing.jpg">
+    <div class="parent">
+    <div style="text-indent: 2em">电视动画《火影忍者》改编自日本漫画家岸本齐史的同
+        名漫画，2002年10月3日在东京电视台系列全6局、岐阜
+        放送首播，共220话。<p>第二季《火影忍者疾风传》自2007
+        年2月开始播出，共500话；累计全720话.</p></div>
+    <div><img src="hy.png"></div>
+    </div>
+</body>
+</html>
